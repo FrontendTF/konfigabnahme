@@ -14,20 +14,13 @@ private EmailValidator validator;
 
   @Test
     public void testValidText() {
-        String validText = "xyz";
-        assertTrue(calc.javamethodname(validText));
+        String validText = "user@example.com";
+        assertTrue(validator.isValid(validText));
     }
 
     @Test
     public void testInvalidText() {
-        String invalidText = "wqüäö";
-        assertFalse(calc.javamethodname(invalidText));
+        String invalidText = "userexample.org";
+        assertFalse(validator.isValid(invalidText));
     }
-
-
-
-
-
-
-
 }
